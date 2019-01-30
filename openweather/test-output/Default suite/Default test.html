@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Jan 28 23:49:20 GMT 2019</td>
+<td>Started on:</td><td>Wed Jan 30 01:00:05 GMT 2019</td>
 </tr>
-<tr><td>Total time:</td><td>5 seconds (5744 ms)</td>
+<tr><td>Total time:</td><td>10 seconds (10194 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,8 +75,11 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='step_definition.TestRunner.feature()'><b>feature</b><br>Test class: step_definition.TestRunner<br>Test method: Runs Cucumber Feature<br>Parameters: To check the weather of a particular city</td>
-<td><div><pre>cucumber.runtime.CucumberException: java.lang.NullPointerException
+<td title='step_definition.TestRunner.feature()'><b>feature</b><br>Test class: step_definition.TestRunner<br>Test method: Runs Cucumber Feature<br>Parameters: Click on one of the day should display three hours weather report</td>
+<td><div><pre>cucumber.runtime.CucumberException: org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.141.0&apos;, revision: &apos;2ecb7d9a&apos;, time: &apos;2018-10-31T20:09:30&apos;
+System info: host: &apos;RAKSHASA-PC&apos;, ip: &apos;192.168.1.133&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_191&apos;
+Driver info: driver.version: RemoteWebDriver
 	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
 	at cucumber.api.testng.AbstractTestNGCucumberTests.feature(AbstractTestNGCucumberTests.java:21)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -104,11 +107,22 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: java.lang.NullPointerException
-	at step_definition.GetWeatherForACity.lambda$0(GetWeatherForACity.java:29)
-	at ?.Given I launch the weather page(features/City.feature:5)
-</pre></div><a href='#' onClick='toggleBox("stack-trace687501326", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace687501326'><pre>cucumber.runtime.CucumberException: java.lang.NullPointerException
+Caused by: org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.141.0&apos;, revision: &apos;2ecb7d9a&apos;, time: &apos;2018-10-31T20:09:30&apos;
+System info: host: &apos;RAKSHASA-PC&apos;, ip: &apos;192.168.1.133&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_191&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at step_definition.ThreeHoursWeather.lambda$1(ThreeHoursWeather.java:41)
+	at ?.When Clicked on the first date displyed for Perth(features/ThreeDay.feature:6)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1951500432", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1951500432'><pre>cucumber.runtime.CucumberException: org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.141.0&apos;, revision: &apos;2ecb7d9a&apos;, time: &apos;2018-10-31T20:09:30&apos;
+System info: host: &apos;RAKSHASA-PC&apos;, ip: &apos;192.168.1.133&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_191&apos;
+Driver info: driver.version: RemoteWebDriver
 	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
 	at cucumber.api.testng.AbstractTestNGCucumberTests.feature(AbstractTestNGCucumberTests.java:21)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -136,12 +150,33 @@ Caused by: java.lang.NullPointerException
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: java.lang.NullPointerException
-	at step_definition.GetWeatherForACity.lambda$0(GetWeatherForACity.java:29)
-	at ?.Given I launch the weather page(features/City.feature:5)
+Caused by: org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.141.0&apos;, revision: &apos;2ecb7d9a&apos;, time: &apos;2018-10-31T20:09:30&apos;
+System info: host: &apos;RAKSHASA-PC&apos;, ip: &apos;192.168.1.133&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_191&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at step_definition.ThreeHoursWeather.lambda$1(ThreeHoursWeather.java:41)
+	at ?.When Clicked on the first date displyed for Perth(features/ThreeDay.feature:6)
 </pre></div></td>
-<td>5</td>
-<td>step_definition.TestRunner@64bfbc86</td></tr>
+<td>0</td>
+<td>step_definition.TestRunner@55d56113</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='step_definition.TestRunner.feature()'><b>feature</b><br>Test class: step_definition.TestRunner<br>Test method: Runs Cucumber Feature<br>Parameters: To check the weather of a particular city</td>
+<td></td>
+<td>9</td>
+<td>step_definition.TestRunner@55d56113</td></tr>
 </table><p>
 </body>
 </html>

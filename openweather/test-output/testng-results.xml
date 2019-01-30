@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+<testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="5744" started-at="2019-01-28T23:49:20Z" finished-at="2019-01-28T23:49:26Z">
+  <suite name="Default suite" duration-ms="10194" started-at="2019-01-30T01:00:05Z" finished-at="2019-01-30T01:00:15Z">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:step_definition.TestRunner@64bfbc86]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:step_definition.TestRunner@55d56113]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Default test" duration-ms="5744" started-at="2019-01-28T23:49:20Z" finished-at="2019-01-28T23:49:26Z">
+    <test name="Default test" duration-ms="10194" started-at="2019-01-30T01:00:05Z" finished-at="2019-01-30T01:00:15Z">
       <class name="step_definition.TestRunner">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:step_definition.TestRunner@64bfbc86]" name="setUpClass" is-config="true" duration-ms="552" started-at="2019-01-28T23:49:20Z" finished-at="2019-01-28T23:49:21Z">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:step_definition.TestRunner@55d56113]" name="setUpClass" is-config="true" duration-ms="741" started-at="2019-01-30T01:00:05Z" finished-at="2019-01-30T01:00:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="FAIL" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:step_definition.TestRunner@64bfbc86]" name="feature" duration-ms="5014" started-at="2019-01-28T23:49:21Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2019-01-28T23:49:26Z">
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:step_definition.TestRunner@55d56113]" name="feature" duration-ms="9252" started-at="2019-01-30T01:00:06Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2019-01-30T01:00:15Z">
           <params>
             <param index="0">
               <value>
@@ -22,12 +22,29 @@
               </value>
             </param>
           </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="FAIL" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:step_definition.TestRunner@55d56113]" name="feature" duration-ms="36" started-at="2019-01-30T01:00:15Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2019-01-30T01:00:15Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Click on one of the day should display three hours weather report]]>
+              </value>
+            </param>
+          </params>
           <exception class="cucumber.runtime.CucumberException">
             <message>
-              <![CDATA[java.lang.NullPointerException]]>
+              <![CDATA[org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '3.141.0', revision: '2ecb7d9a', time: '2018-10-31T20:09:30'
+System info: host: 'RAKSHASA-PC', ip: '192.168.1.133', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
+Driver info: driver.version: RemoteWebDriver]]>
             </message>
             <full-stacktrace>
-              <![CDATA[cucumber.runtime.CucumberException: java.lang.NullPointerException
+              <![CDATA[cucumber.runtime.CucumberException: org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '3.141.0', revision: '2ecb7d9a', time: '2018-10-31T20:09:30'
+System info: host: 'RAKSHASA-PC', ip: '192.168.1.133', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
+Driver info: driver.version: RemoteWebDriver
 at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
 at cucumber.api.testng.AbstractTestNGCucumberTests.feature(AbstractTestNGCucumberTests.java:21)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -55,16 +72,24 @@ at org.testng.TestNG.run(TestNG.java:1017)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: java.lang.NullPointerException
-at step_definition.GetWeatherForACity.lambda$0(GetWeatherForACity.java:29)
-at ✽.Given I launch the weather page(features/City.feature:5)
+Caused by: org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '3.141.0', revision: '2ecb7d9a', time: '2018-10-31T20:09:30'
+System info: host: 'RAKSHASA-PC', ip: '192.168.1.133', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
+Driver info: driver.version: RemoteWebDriver
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at step_definition.ThreeHoursWeather.lambda$1(ThreeHoursWeather.java:41)
+at ✽.When Clicked on the first date displyed for Perth(features/ThreeDay.feature:6)
 ]]>
             </full-stacktrace>
           </exception> <!-- cucumber.runtime.CucumberException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- feature -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:step_definition.TestRunner@64bfbc86]" name="tearDownClass" is-config="true" duration-ms="15" started-at="2019-01-28T23:49:26Z" finished-at="2019-01-28T23:49:26Z">
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:step_definition.TestRunner@55d56113]" name="tearDownClass" is-config="true" duration-ms="13" started-at="2019-01-30T01:00:15Z" finished-at="2019-01-30T01:00:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

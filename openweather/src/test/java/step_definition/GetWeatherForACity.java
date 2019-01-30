@@ -8,6 +8,8 @@ import java.util.List;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import com.wiprodigital.openweather.helpers.WebDriverHelper;
+
 import cucumber.api.java8.En;
 
 public class GetWeatherForACity implements En{
@@ -21,8 +23,8 @@ public class GetWeatherForACity implements En{
 	public GetWeatherForACity() 
 	{ 
 		
-		driver= Hooks.driver;
-		
+	     this.driver = (ChromeDriver) WebDriverHelper.getWebDriver();
+
 	Given("^I launch the weather page$", () -> {
 	    // Write code here that turns the phrase above into concrete actions
 		System.out.println(driver==null);
@@ -91,9 +93,7 @@ public class GetWeatherForACity implements En{
 	
 	
 	
-	
-	
-	} 
+	}
 	
 
 
